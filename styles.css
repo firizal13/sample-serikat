@@ -27,7 +27,7 @@
 }
 
 /* Prevent layout shift during font loading */
-.hero-text h1 {
+.hero-text-intro h1 {
     font-synthesis: none;
     text-rendering: optimizeSpeed;
 }
@@ -153,12 +153,11 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
 /* Header Styles */
 .header {
-    background: linear-gradient(135deg, rgba(139, 53, 255, 0.3) 0%, rgba(255, 128, 0, 0.3) 100%);
-    backdrop-filter: blur(20px) saturate(150%);
-    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    background: linear-gradient(90deg, #1e22a7 0%, #e2005a 100%);
+    /* backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%); */
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     position: sticky;
@@ -324,7 +323,7 @@ body {
     align-items: center;
 }
 
-.hero-text h1 {
+.hero-text-intro h1 {
     font-family:
         "XLSMARTSans-Bold",
         Segoe UI,
@@ -338,7 +337,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.hero-text p {
+.hero-text-intro p {
     font-family:
         "XLSMARTSans-Regular",
         Segoe UI,
@@ -347,7 +346,7 @@ body {
         Verdana,
         sans-serif;
     font-size: 1.1rem;
-    color: #666;
+    color: #1e22a7;
     margin-bottom: 2rem;
     line-height: 1.8;
 }
@@ -357,13 +356,20 @@ body {
     flex-direction: column;
     gap: 1rem;
 }
-.anggota {
-    background: linear-gradient(90deg, #1e22a7 0%, #e2005a 100%);
-    height: 150px;
-    width: 100%;
-    color: #fff;
+.button-top {
     display: flex;
-    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.anggota {
+    height: 327px;
+    background-image: url(images/icon-sepeda.webp);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+    color: #1e22a7;
+    display: flex;
+    justify-content: flex-start;
     align-content: center;
     align-items: center;
     flex-wrap: nowrap;
@@ -371,7 +377,8 @@ body {
     flex-direction: column;
 }
 .anggota span {
-    font-size: 2em;
+    font-family: "XLSMARTSans-Bold";
+    font-size: 4em;
     font-weight: bold;
 }
 .btn {
@@ -383,29 +390,48 @@ body {
     transition: all 0.3s ease;
     text-align: center;
     font-size: 14px;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #8b35ff 0%, #e91e63 100%);
+    width: -webkit-fill-available;
+    background: #1e22a7;
     color: white;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
 }
-
-.btn-secondary {
-    background: white;
-    color: #8b35ff;
-    border: 2px solid #8b35ff;
-}
-
-.btn-tertiary {
-    background: #e91e63;
-    color: white;
-}
-
 .btn:hover {
-    transform: translateY(-2px);
+    background: white;
+    color: #1e22a7;
+    border: 2px solid #8b35ff;
+    transform: translateY(-2px);    transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+.btn-daftar span{
+    width: 20px;
+    height: 16px;
+    background: url(images/ico-daftar.webp) no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    margin-right: 8px;
+}
 
+.btn-pelajari span{
+    width: 32px;
+    height: 16px;
+    background: url(images/ico-pelajari.webp) no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.btn:hover.btn-daftar span{
+    background-size: contain !important;
+    background: url(images/ico-daftar-hover.webp) no-repeat center;
+}  
+.btn:hover.btn-pelajari span{
+    background-size: contain !important;
+    background: url(images/ico-pelajari-hover.webp) no-repeat center;
+}
 .hero-image {
     display: flex;
     justify-content: center;
@@ -413,7 +439,7 @@ body {
 }
 
 .hands-illustration {
-    width: 400px;
+    width: 500px;
     height: 400px;
     display: flex;
     align-items: center;
@@ -591,22 +617,54 @@ body {
 }
 
 .cta-section {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
+.cta-section .btn {
+    width: fit-content;
+}
+
 
 /* Vision Section */
 .vision-section {
     padding: 80px 0;
     background: white;
+    overflow: hidden;
 }
+.vision-section .container .bg-mountain {
+    position: fixed;
+    background: url('images/bg-mountain.webp') no-repeat center / cover;
+    height: 703px;
+    width: 408px;
+    display: block;
+    top: 60px;
+    left: -110px;
+}
+.vision-section .container .bg-boat {
+    position: relative;
+    background: url('images/bg-boat.webp') no-repeat center / cover;
+    height: 375px;
+    width: 1363px;
+    display: block;
+    bottom: -80px;
+    right: -80px;
+}
+
+
 
 .vision-content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
+    grid-template-columns: 20vw 1fr 1fr; /* gutter, then your two columns */
+    gap: 1rem;
     align-items: center;
+    
 }
-
+.vision-content::before {
+  content: "";
+  grid-column: 1;         /* put the pseudo item in the gutter */
+  grid-row: 1 / -1;       /* span all rows */
+}
 .person-illustration {
     width: 300px;
     height: 300px;
@@ -639,6 +697,9 @@ body {
     font-weight: bold;
     color: #1e22a7;
     margin-bottom: 2rem;
+    border-bottom: solid 2px #1e22a7;
+    padding-bottom: 5px;
+    width: 30%;
 }
 
 .vision-text ul {
@@ -653,14 +714,6 @@ body {
     position: relative;
     color: #666;
     line-height: 1.8;
-}
-
-.vision-text li::before {
-    content: "•";
-    color: #8b35ff;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
 }
 
 /* Mission Section */
@@ -724,13 +777,18 @@ body {
     line-height: 1.8;
 }
 
-.mission-text li::before {
-    content: "•";
-    color: #e91e63;
+.vision-text li::before, .mission-text li::before {
+    content: "";
+    color: #8b35ff;
+    top: 5px;
     font-weight: bold;
     position: absolute;
     left: 0;
+    width: 1rem;
+    height: 1rem;
+    background: url('images/ico-arrow.webp') no-repeat center / contain;
 }
+
 
 /* Footer */
 .footer {
@@ -869,6 +927,16 @@ body {
     .device-illustration {
         width: 95%;
     }
+    .vision-content{
+        justify-items: end;
+    }
+    .vision-section .container .bg-mountain,
+    .vision-section .container .bg-boat {
+        display: none;
+    }
+
+
+
 }
 
 @media (max-width: 480px) {

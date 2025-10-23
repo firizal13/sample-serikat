@@ -53,20 +53,20 @@ window.addEventListener('scroll', () => {
 });
 
 // Header background change on scroll
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 100) {
-        header.style.background = 'linear-gradient(135deg, rgba(139, 53, 255, 0.65) 0%, rgba(233, 30, 99, 0.65) 100%)';
-        header.style.backdropFilter = 'blur(25px)';
-        header.style.boxShadow = '0 8px 32px rgba(139, 53, 255, 0.3)';
-        header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
-    } else {
-        header.style.background = 'linear-gradient(135deg, rgba(139, 53, 255, 0.9) 0%, rgba(233, 30, 99, 0.9) 100%)';
-        header.style.backdropFilter = 'blur(20px)';
-        header.style.boxShadow = '0 8px 32px rgba(139, 53, 255, 0.2)';
-        header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
-    }
-});
+// window.addEventListener('scroll', () => {
+//     const header = document.querySelector('.header');
+//     if (window.scrollY > 100) {
+//         header.style.background = 'linear-gradient(135deg, rgba(139, 53, 255, 0.65) 0%, rgba(233, 30, 99, 0.65) 100%)';
+//         header.style.backdropFilter = 'blur(25px)';
+//         header.style.boxShadow = '0 8px 32px rgba(139, 53, 255, 0.3)';
+//         header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
+//     } else {
+//         header.style.background = 'linear-gradient(135deg, rgba(139, 53, 255, 0.9) 0%, rgba(233, 30, 99, 0.9) 100%)';
+//         header.style.backdropFilter = 'blur(20px)';
+//         header.style.boxShadow = '0 8px 32px rgba(139, 53, 255, 0.2)';
+//         header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+//     }
+// });
 
 // Intersection Observer for animations
 const observerOptions = {
@@ -249,7 +249,7 @@ function addLoadingState(button, text = 'Memproses...') {
     };
 }
 // Counter effect for .anggota span
-function animateCounter(element, target, duration = 2000) {
+function animateCounter(element, target, duration = 1000) {
     let start = 0;
     const increment = target / (duration / 16); // 60fps
 
