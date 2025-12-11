@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referensi - SPXLSMART</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #5a3e9e;
+        }
+
+        /* Responsive Image Container */
+        .image-container {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Section 1: Hak Pekerja */
+        .section-hak-pekerja {
+            background: linear-gradient(180deg, #ffffff 0%, #f0f0ff 100%);
+        }
+
+        /* Section 2: Perlu Bantuan */
+        .section-bantuan {
+            background: linear-gradient(180deg, #f0f0ff 0%, #ffffff 100%);
+        }
+
+        /* Divider */
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, #5a3e9e, #e91e63, #5a3e9e);
+            margin: 0 auto;
+            max-width: 200px;
+            border-radius: 2px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .section {
+                padding: 25px 0;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            .image-container {
+                border-radius: 8px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                padding: 20px 0;
+            }
+
+            .section-title {
+                font-size: 1.25rem;
+                margin-bottom: 15px;
+            }
+
+            .image-container {
+                border-radius: 6px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        /* Navigation Link */
+        .back-link {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #5a3e9e 0%, #7c5fc7 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: linear-gradient(135deg, #7c5fc7 0%, #5a3e9e 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(90, 62, 158, 0.4);
+        }
+
+        .nav-container {
+            text-align: center;
+            padding: 30px 0;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+    </nav>
+
+    <!-- Section 1: Hak-Hak Pekerja di Indonesia -->
+    <section class="section section-hak-pekerja" id="hak-pekerja">
+        <div class="container">
+            <h2 class="section-title">Hak-Hak Pekerja di Indonesia</h2>
+            <div class="image-container">
+                <img 
+                    src="images/hak-pekerja.png" 
+                    alt="Hak-Hak Pekerja di Indonesia - Berdasarkan UU Ketenagakerjaan, setiap pekerja memiliki hak yang dilindungi termasuk Hak Berserikat, Hak atas Upah Minimum, dan Hak atas Perlindungan dari PHK Sepihak"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Section 2: Perlu Bantuan -->
+    <section class="section section-bantuan" id="bantuan">
+        <div class="container">
+            <h2 class="section-title">Perlu Bantuan?</h2>
+            <div class="image-container">
+                <img 
+                    src="images/bantuan.png" 
+                    alt="Perlu Bantuan? Hubungi SPXLSMART - WhatsApp: 0818-1888-8231, Email: staff-spxlsmart@xlsmart.co.id, Alamat: XLSmart Tower Jl. H.R. Rasuna Said X5 Kav. 11-12, Instagram: @spxlsmart"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Navigation -->
+    <nav class="nav-container">
+        <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+    </nav>
+
+</body>
+</html>
