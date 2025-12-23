@@ -294,3 +294,6 @@ const anggotaElement = document.querySelector('.anggota');
 if (anggotaElement) {
     counterObserver.observe(anggotaElement);
 }
+
+// get Year
+document.getElementById("year").innerHTML = new Date().getFullYear();
